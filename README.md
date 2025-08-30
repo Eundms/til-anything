@@ -1,6 +1,0 @@
-# learn-cloud
-## Linux
-
-
-
-## Kubernetes
