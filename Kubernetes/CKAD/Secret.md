@@ -77,3 +77,13 @@ data:
   DB_User: cm9vdA==
   DB_PASSWORD: cGFzd3JK
 ```
+
+## etcd Encryption at Rest 활성화
+- https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
+
+kubectl create secret --help
+
+kubectl create secret generic my-secret --from-literal=key1=supersecret
+kubectl describe secret my-secret -o yaml
+echo "" | base64 --decode
+
