@@ -88,3 +88,21 @@
 - startupProbe → 충분히 길게
 - readinessProbe → (/actuator/health/readiness)
 - livenessProbe → 너무 민감하게 하지 말 것 (/actuator/health/liveness)
+
+## kubectl replace -f a.yaml --force
+
+```yaml
+spec:
+  containers:
+  - env:
+    readinessProbe:
+      httpGet:
+        path: /ready
+        port: 8080
+    livenessProbe:
+      httpGet:
+        path: /live
+        port: 8080
+      periodSeconds: 1
+      initialDelaySeconds: 80
+```

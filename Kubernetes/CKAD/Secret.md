@@ -87,3 +87,7 @@ kubectl create secret generic my-secret --from-literal=key1=supersecret
 kubectl describe secret my-secret -o yaml
 echo "" | base64 --decode
 
+kubectl run nginx --image=nginx
+
+kubectl get pods
+
